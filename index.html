@@ -44,24 +44,6 @@
     <input type="text" id="image-url" placeholder="Entrez l'URL de l'image">
     <button onclick="ajouterImage()">Ajouter l'image</button>
 
-    <div id="image-container">
-        <div class="image-item">
-            <img src="https://static.wikia.nocookie.net/onepiece/images/7/7f/Monkey_D._Luffy_Anime_Post_Ellipse_Infobox.png/revision/latest/scale-to-width-down/270?cb=20170617172443&path-prefix=fr" alt="Monkey D. Luffy">
-            <p>Monkey D. Luffy</p>
-        </div>
-        <div class="image-item">
-            <img src="https://static.wikia.nocookie.net/heros/images/7/72/Roronoa_Zoro_Infobox.jpg/revision/latest?cb=20200620183525&path-prefix=fr" alt="Roronoa Zoro">
-            <p>Roronoa Zoro</p>
-        </div>
-        <div class="image-item">
-            <img src="https://i.pinimg.com/736x/b4/dd/7f/b4dd7f06d79c46c52bdce1b1f18de019.jpg" alt="Sanji">
-            <p>Sanji</p>
-        </div>
-        <div class="image-item">
-            <img src="https://www.pro-bems.com/IMAGES/images_1/FIGMEHO840432/m/FIGMEHO840432_5.jpg" alt="Tony Tony Chopper">
-            <p>Tony Tony Chopper</p>
-        </div>
-    </div>
     <script>
         function ajouterImage() {
             const url = document.getElementById('image-url').value;
@@ -73,6 +55,25 @@
             document.getElementById('image-url').value = ''; // Réinitialiser le champ de texte
         }
     </script>
+
+    <div id="image-container">
+        <div class="image-item">
+            <img src="https://cdn.shopify.com/s/files/1/0755/5068/7558/files/image_2023-06-13_182306500.png?v=1686673390" alt="Monkey D. Luffy">
+            <p>Monkey D. Luffy</p>
+        </div>
+        <div class="image-item">
+            <img src="https://media-mcetv.ouest-france.fr/wp-content/uploads/2023/10/one-piece-top-5-des-plus-grandes-faiblesses-de-roronoa-zoro-.jpg" alt="Roronoa Zoro">
+            <p>Roronoa Zoro</p>
+        </div>
+        <div class="image-item">
+            <img src="https://i.pinimg.com/736x/b4/dd/7f/b4dd7f06d79c46c52bdce1b1f18de019.jpg" alt="Sanji">
+            <p>Sanji</p>
+        </div>
+        <div class="image-item">
+            <img src="https://www.pro-bems.com/IMAGES/images_1/FIGMEHO840432/m/FIGMEHO840432_5.jpg" alt="Tony Tony Chopper">
+            <p>Tony Tony Chopper</p>
+        </div>
+    </div>
 
 
 </body>
