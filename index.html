@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie d'Images One Piece</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            text-align: center;
+        }
+        #image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .image-item {
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            max-width: 200px;
+            text-align: center;
+        }
+        img {
+            width: 200px; /* largeur fixe */
+            height: 200px; /* hauteur fixe */
+            object-fit: cover; /* garder le ratio */
+            display: block;
+        }
+        input {
+            width: 300px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Galerie d'Images One Piece</h1>
+    <input type="text" id="image-url" placeholder="Entrez l'URL de l'image">
+    <button onclick="ajouterImage()">Ajouter l'image</button>
+
+    <div id="image-container">
+        <div class="image-item">
+            <img src="https://static.wikia.nocookie.net/onepiece/images/7/7f/Monkey_D._Luffy_Anime_Post_Ellipse_Infobox.png/revision/latest/scale-to-width-down/270?cb=20170617172443&path-prefix=fr" alt="Monkey D. Luffy">
+            <p>Monkey D. Luffy</p>
+        </div>
+        <div class="image-item">
+            <img src="https://static.wikia.nocookie.net/heros/images/7/72/Roronoa_Zoro_Infobox.jpg/revision/latest?cb=20200620183525&path-prefix=fr" alt="Roronoa Zoro">
+            <p>Roronoa Zoro</p>
+        </div>
+        <div class="image-item">
+            <img src="https://static.wikia.nocookie.net/onepiece/images/6/68/Nami_Anime_Post_Timeskip_Infobox.png/revision/latest/scale-to-width-down/1000?cb=20231229102046" alt="Nami">
+            <p>Nami</p>
+        </div>
+        <div class="image-item">
+            <img src="https://i.pinimg.com/736x/b4/dd/7f/b4dd7f06d79c46c52bdce1b1f18de019.jpg" alt="Sanji">
+            <p>Sanji</p>
+        </div>
+        <div class="image-item">
+            <img src="https://www.pro-bems.com/IMAGES/images_1/FIGMEHO840432/m/FIGMEHO840432_5.jpg" alt="Tony Tony Chopper">
+            <p>Tony Tony Chopper</p>
+        </div>
+    </div>
+
+    <script>
+        function ajouterImage() {
+            const url = document.getElementById('image-url').value;
+            const container = document.getElementById('image-container');
+            const newItem = document.createElement('div');
+            newItem.classList.add('image-item');
+            newItem.innerHTML = `<img src="${url}" alt="Nouvelle image"><p>Nouvelle image</p>`;
+            container.appendChild(newItem);
+            document.getElementById('image-url').value = ''; // Réinitialiser le champ de texte
+        }
+    </script>
+</body>
+</html>
